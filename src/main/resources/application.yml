@@ -1,0 +1,12 @@
+resilience4j:
+  circuitbreaker:
+      instance:
+          UserService:
+             registerHealthIndicator: true
+             eventConsumerBufferSize: 10
+
+resilience4j.timelimiter:
+    configs:
+        default:
+            timeoutDuration: 5s
+            cancelRunningFuture: true
